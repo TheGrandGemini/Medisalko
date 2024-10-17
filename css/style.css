@@ -1,0 +1,302 @@
+:root{
+  --light-blue:#dddbfe;
+  --dark-blue:#7267fe;
+  --white:#feffff;
+  --black:#000;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 2;
+  background-color: var(--white);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+header{
+  display: flex;
+  margin: 10px;
+  height: 70px;
+  width: 100vw;
+}
+
+h1{
+  color: var(--dark-blue);
+  margin: 10px 3vw;
+  font-size: 2rem;
+  font-weight: 800;
+  max-width:20vw;
+}
+
+nav{
+  background-color: var(--light-blue);
+  font-size: 1.2rem;
+  margin: 0 auto;
+  border-radius: 15px;
+  width: 50vw;
+}
+
+nav ul{
+  margin: 0.5vh 3vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li{
+  list-style: none;
+  margin: 10px;
+}
+
+nav ul li:not(:first-child){
+  margin-left: 5vw;
+}
+
+nav ul li a:link, nav ul li a:visited{
+  text-decoration: none;
+  color: var(--black);
+}
+
+nav ul li a:hover, nav ul li a:focus{
+  text-decoration: underline solid 3px var(--dark-blue) ;
+  text-underline-offset: 5px;
+  font-size: 1.3rem;
+}
+
+ header .button{
+  background-color: var(--dark-blue);
+  border-radius: 15px; 
+  max-width: 15vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+}
+
+ header .button p{
+  margin: 13px 20px ;
+  font-size: 1.3rem;
+}
+
+.button p a:link, .button p a:visited{
+  text-decoration: none;
+  color: var(--white) ;
+  transition: color 1s ease-in-out ;
+}
+
+.button p a:hover, .button p a:focus{
+ color: #333;
+ text-decoration: underline solid 3px var(--white) ;
+ text-underline-offset: 5px;
+}
+
+.image-section{
+  margin: 15px;
+  display: flex;
+  width: 100vw;
+}
+
+.doctor-image img{
+  width: 31vw;
+  height:auto;
+  border-radius: 15px;
+}
+
+.image-section:not(:last-child) .doctor-image img{
+  margin-right:15px ;
+} 
+
+.first-paragraph{
+  margin: 5px 0;
+  text-align:center ;
+  
+}
+
+.first{
+  font-weight: 800;
+  font-size: 2.6rem;
+  color: #7267fe;
+}
+.second{
+  font-size: 2.2rem;
+  margin: 0 10px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.second-paragraph{
+  margin: 5px 5px 20px 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.2;
+}
+
+strong{
+  text-decoration: solid underline var(--black) 1px;
+  color: var(--dark-blue);
+}
+
+.text-section .button {
+  margin: 20px auto;
+  width: 160px;
+}
+
+.service-section{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2vw;
+
+}
+
+.service{
+  background-color: var(--light-blue);
+  color: var(--black);
+  margin: 10px 5px;
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  max-width: 32%;
+  box-shadow: 2px 2px 4px var(--dark-blue);
+}
+
+.service h3{
+  margin-left:20px ;
+  font-size: 1.3rem;
+  font-family: serif;
+  text-shadow: 1px 1px 2px #333 ;
+}
+
+.service p{
+  font-size: 1.1rem;
+  margin: 0 10px ;
+}
+
+.service img{
+  width: 40px;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  top: 80px;
+}
+
+.third p{
+  padding-right: 20px;
+}
+
+.third img{
+  top: 82px;
+}
+
+.service:hover img{
+  width: 50px;
+}
+
+.service:hover p{
+  font-size: 1.3rem;
+}
+
+
+@media only screen  and (min-width:300px) and (max-width:991px) {
+
+  header{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100vw;
+    position: relative;
+  }
+
+  nav{
+    margin-top: 10px;
+    width: 90vw;
+    margin-left: 1.5vw;
+  }
+
+  nav ul{
+    margin: 0.5vh 1.5vw;
+  }
+
+  header .button{
+    max-width: max-content;
+    position: absolute;
+    right: 0;
+    margin: 10px 10vw;
+  }
+
+  .image-section{
+    margin: 0 auto;
+  }
+
+  .doctor-image:not(.first-img) img{
+    display: none;
+  }
+
+  .doctor-image img{
+    width: 90vw;
+    margin-left: 5vw ;
+  }
+
+  .first{
+    line-height: 1.1;
+    font-size: 2.4rem;
+  }
+
+  .second{
+    font-size: 2rem;
+    margin: 0 30px;
+  }
+
+  .second-paragraph{
+    font-size: 1.1rem;
+    margin: 0 70px ;
+    text-align: center;
+  }
+
+  .text-section .button{
+    background-color: var(--dark-blue);
+    border-radius: 15px; 
+    max-width: 30vw;
+    height: 50px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+
+  }
+
+  .service-section{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service{
+    max-width: 90vw;
+    padding: 0 20px;
+  }
+
+  .service h3{
+    font-size: 1.4rem;
+  }
+  
+  .service p {
+    max-width: 90%;
+    font-size: 1.2rem;
+  }
+
+  .service img{
+    top: 40px;
+  }
+
+  .third img{
+    top: 70px;
+  }
+
+ }
+  
